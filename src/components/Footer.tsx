@@ -14,7 +14,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Bijay Rouniyar. Built with{" "}
+            © {currentYear} Bijay Rouniyar.
             <span className="text-primary">♥</span> and React.
           </p>
 
