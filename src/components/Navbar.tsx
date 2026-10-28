@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { scrollToSection } from "@/lib/section-navigation";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -44,6 +45,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+                onClick={scrollToSection}
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -76,7 +78,7 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.nav
-              className="absolute top-20 left-6 right-6 glass rounded-xl p-6"
+              className="absolute top-20 left-6 right-6 z-10 glass rounded-xl p-6"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -88,7 +90,10 @@ const Navbar = () => {
                     key={link.name}
                     href={link.href}
                     className="text-lg font-medium py-2 text-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(event) => {
+                      scrollToSection(event);
+                      setIsMobileMenuOpen(false);
+                    }}
                   >
                     {link.name}
                   </a>

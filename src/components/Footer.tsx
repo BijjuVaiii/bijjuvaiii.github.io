@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { scrollToSection } from "@/lib/section-navigation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,6 +25,7 @@ const Footer = () => {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                onClick={scrollToSection}
               >
                 {item}
               </a>

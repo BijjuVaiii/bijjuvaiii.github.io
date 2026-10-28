@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { scrollToSection } from "@/lib/section-navigation";
 import { ArrowDown, Github, Linkedin, Instagram, Mail, Phone } from "lucide-react";
 import profileImage from "@/assets/profile.png";
 
@@ -118,12 +119,14 @@ const Hero = () => {
               <a
                 href="#projects"
                 className="group relative px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover-glow"
+                onClick={scrollToSection}
               >
                 <span className="relative z-10">View Projects</span>
               </a>
               <a
                 href="#contact"
                 className="px-8 py-4 font-semibold rounded-lg glass glass-hover"
+                onClick={scrollToSection}
               >
                 Contact Me
               </a>
