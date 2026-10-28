@@ -11,6 +11,11 @@ const Index = () => {
   useEffect(() => {
     // Set dark mode by default
     document.documentElement.classList.add("dark");
+
+    const sectionId = window.location.hash.slice(1);
+    if (sectionId) {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    }
   }, []);
 
   return (
