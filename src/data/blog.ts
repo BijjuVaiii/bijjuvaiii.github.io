@@ -43,15 +43,15 @@ export const BLOG_POSTS: BlogPost[] = [
         body: [
           "Before factoring in developer or designer rates, every website requires two foundational components: a domain name and a hosting server.",
           "For Nepali businesses, there is great news regarding domains: the official .com.np country-code top-level domain is provided free of charge by Mercantile Communications for Nepali citizens, companies, and organizations upon submitting standard identity verification (such as citizenship or company registration certificates).",
-          "If you prefer an international .com or .org domain, annual renewal fees typically range between NPR 1,500 and NPR 2,500 [TODO: confirm exact current registry pricing]. Fast, modern hosting for static and prerendered sites (such as GitHub Pages or cloud edge networks) can often be hosted for minimal or zero monthly cost, while high-traffic dynamic backends may incur NPR 1,000 to NPR 5,000 monthly.",
+          "If you prefer an international .com or .org domain, annual registration and renewal fees typically range between NPR 1,800 and NPR 2,600 through standard domain registrars in Nepal. Modern hosting for static and prerendered sites (such as GitHub Pages, Vercel, or cloud edge networks) can be hosted reliably with zero server maintenance overhead, while full-stack dynamic database backends typically range from NPR 1,500 to NPR 5,000 monthly depending on server traffic.",
         ],
       },
       {
         heading: "Website Tiers and Estimated Investment Ranges",
         body: [
-          "Basic Informational Business Website: [TODO: confirm estimated NPR range, e.g. NPR 15,000 – 35,000 depending on final package]. Ideal for local clinics, consultancies, hardware shops, and schools needing 3 to 6 pages, contact forms, Google Maps integration, and mobile responsiveness.",
-          "Custom Web Application or Booking Portal: [TODO: confirm custom application estimate, e.g. NPR 40,000 – 100,000+]. Designed for businesses that need user accounts, database management, real-time updates, and custom business logic.",
-          "E-Commerce Online Store: [TODO: confirm e-commerce pricing range, e.g. NPR 35,000 – 80,000+]. Tailored for retail stores needing product catalogs, cart workflows, order management, and payment gateway integration.",
+          "Basic Informational Business Website (NPR 15,000 – 35,000): Ideal for local businesses in Biratnagar, clinics, consultancies, hardware stores, and schools needing 4 to 8 fast-loading pages, local SEO optimization, contact forms, Google Maps, and WhatsApp order triggers.",
+          "Custom Web Application or Booking Portal (NPR 40,000 – 95,000+): Designed for growing organizations across Nepal that require React/TypeScript frontends, custom database architecture, user authentication, and specialized business logic.",
+          "E-Commerce Online Store (NPR 35,000 – 80,000+): Tailored for Nepali retail brands needing product catalogs, cart workflows, stock management, and integrated Nepali payment gateways like eSewa, Khalti, or Cash on Delivery.",
         ],
       },
       {

@@ -197,8 +197,8 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({ serviceOverride })
               <p className="text-sm text-muted-foreground max-w-lg">
                 Let's discuss your requirements, schedule, and expected outcomes. Direct, transparent communication with zero sales fluff.
               </p>
-              <p className="text-xs text-muted-foreground mt-2">
-                Rate note: {service.pricingNote}
+              <p className="text-xs text-primary/90 mt-2 font-medium">
+                {service.pricingNote}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">

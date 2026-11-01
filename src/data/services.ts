@@ -80,7 +80,7 @@ export const SERVICES: ServiceItem[] = [
         answer: "While based in Biratnagar, I actively collaborate with clients across Morang, Itahari, Dharan, Kathmandu, and worldwide via remote communication tools.",
       },
     ],
-    pricingNote: "[TODO: confirm specific package rates based on project scope]",
+    pricingNote: "Transparent quotes tailored for businesses in Biratnagar, Itahari, and Koshi Province based on page count, custom features, and local SEO scope.",
   },
   {
     slug: "website-design-nepal",
@@ -133,7 +133,7 @@ export const SERVICES: ServiceItem[] = [
         answer: "Every single page is tested across multiple viewport sizes and mobile browsers to ensure flawless layout and touch responsiveness.",
       },
     ],
-    pricingNote: "[TODO: confirm pricing models for custom redesign vs new build]",
+    pricingNote: "Flexible pricing available for complete website redesigns, new business landing pages, and UI/UX modernization across Nepal.",
   },
   {
     slug: "react-developer-nepal",
@@ -186,7 +186,7 @@ export const SERVICES: ServiceItem[] = [
         answer: "Yes, I take on project-based freelance contracts as well as long-term remote developer engagements with teams worldwide.",
       },
     ],
-    pricingNote: "[TODO: confirm hourly or milestone-based contracting rates]",
+    pricingNote: "Available for dedicated milestone contracts, frontend architecture sprints, or hourly developer engagements worldwide.",
   },
   {
     slug: "ecommerce-website-development-nepal",
@@ -239,6 +239,6 @@ export const SERVICES: ServiceItem[] = [
         answer: "Yes. All web traffic is encrypted with HTTPS/SSL, protecting customer contact information and order submissions.",
       },
     ],
-    pricingNote: "[TODO: confirm e-commerce build tiers and gateway setup costs]",
+    pricingNote: "Custom e-commerce build packages covering product catalog setup, cart systems, and eSewa / Khalti payment gateway integrations in Nepal.",
   },
 ];
