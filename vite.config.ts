@@ -7,6 +7,15 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react": ["react", "react-dom", "react-router-dom", "react-helmet-async"],
+          "vendor-motion": ["framer-motion"],
+          "vendor-ui": ["lucide-react", "clsx", "tailwind-merge"],
+        },
+      },
+    },
   },
   server: {
     host: "::",

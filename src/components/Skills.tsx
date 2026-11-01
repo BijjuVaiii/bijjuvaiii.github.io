@@ -1,86 +1,72 @@
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 
 const skills = [
-  { name: "React.js", level: 90, category: "Frontend" },
-  { name: "TypeScript", level: 85, category: "Language" },
-  { name: "Node.js", level: 80, category: "Backend" },
-  { name: "Git & GitHub", level: 88, category: "DevOps" },
-  { name: "HTML/CSS", level: 95, category: "Frontend" },
-  { name: "JavaScript", level: 92, category: "Language" },
+  { name: "React & Next.js", level: 90, category: "Frontend Frameworks" },
+  { name: "TypeScript", level: 88, category: "Core Language" },
+  { name: "JavaScript (ES6+)", level: 92, category: "Core Language" },
+  { name: "Node.js & Express", level: 82, category: "Backend & APIs" },
+  { name: "Tailwind CSS & Modern UI", level: 95, category: "Styling & Design" },
+  { name: "Git, GitHub & CI/CD", level: 86, category: "Tooling & DevOps" },
+  { name: "REST APIs & JSON-LD", level: 90, category: "Web Standards & SEO" },
+  { name: "HTML5 & Semantic Web", level: 96, category: "Frontend Core" },
 ];
 
-const Skills = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
+export const Skills = () => {
   return (
-    <section id="skills" className="py-32 px-6 relative" ref={ref}>
+    <section id="skills" className="py-24 px-6 relative" aria-label="Technical Skills and Stack">
       {/* Background accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" aria-hidden="true" />
 
-      <div className="max-w-4xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">
+      <div className="max-w-5xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <span className="text-primary font-medium text-sm tracking-wider uppercase mb-3 block">
             Skills & Expertise
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Technologies I work with
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Technologies I Engineer With
           </h2>
-        </motion.div>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base">
+            Modern, battle-tested technologies selected for long-term maintainability, developer speed, and peak browser performance.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group glass rounded-xl p-6 glass-hover hover-glow"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="group glass rounded-2xl p-6 glass-hover hover-glow border border-border/60"
             >
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-3">
                 <div>
-                  <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
+                  <h3 className="font-bold text-base group-hover:text-primary transition-colors text-foreground">
                     {skill.name}
                   </h3>
                   <span className="text-xs text-muted-foreground uppercase tracking-wider">
                     {skill.category}
                   </span>
                 </div>
-                <span className="text-2xl font-bold text-primary">
+                <span className="text-sm font-semibold text-primary px-2.5 py-1 rounded-full bg-primary/10">
                   {skill.level}%
                 </span>
               </div>
 
               {/* Progress bar */}
-              <div className="h-2 bg-muted rounded-full overflow-hidden">
-                <motion.div
-                  className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
-                  initial={{ width: 0 }}
-                  animate={isInView ? { width: `${skill.level}%` } : {}}
-                  transition={{ duration: 1, delay: 0.3 + index * 0.1 }}
+              <div 
+                className="h-2 bg-muted rounded-full overflow-hidden" 
+                role="progressbar" 
+                aria-valuenow={skill.level} 
+                aria-valuemin={0} 
+                aria-valuemax={100}
+                aria-label={`${skill.name} proficiency level`}
+              >
+                <div
+                  className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-700"
+                  style={{ width: `${skill.level}%` }}
                 />
-              </div>
-
-              {/* Dots indicator */}
-              <div className="flex gap-1 mt-3">
-                {[...Array(10)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className={`w-2 h-2 rounded-full ${
-                      i < skill.level / 10 ? "bg-primary" : "bg-muted"
-                    }`}
-                    initial={{ scale: 0 }}
-                    animate={isInView ? { scale: 1 } : {}}
-                    transition={{ duration: 0.3, delay: 0.5 + index * 0.05 + i * 0.02 }}
-                  />
-                ))}
               </div>
             </motion.div>
           ))}
