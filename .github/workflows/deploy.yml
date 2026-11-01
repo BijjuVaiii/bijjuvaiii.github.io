@@ -40,11 +40,11 @@ jobs:
       - name: Lint codebase
         run: bun run lint
 
-      - name: Run unit tests
-        run: bun run test
-
       - name: Build site with static prerendering
         run: bun run build
+
+      - name: Run unit tests
+        run: bun run test
 
       - name: Validate SEO and prerendered routes
         run: bun run test:seo
