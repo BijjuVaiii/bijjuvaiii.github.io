@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Analytics from "@/components/Analytics";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import ServiceDetail from "./pages/ServiceDetail";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -19,6 +20,7 @@ export const App = () => {
       <Analytics />
       <Toaster />
       <Sonner />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
